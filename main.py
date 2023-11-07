@@ -11,4 +11,6 @@ if __name__ == '__main__':
     result = test.extract(img)
     full = ' '.join(result)
     result = gpt.predict(full)
-    print(result)
+    print("Full Text:\n",full)
+    print("\n")
+    print("Classification:\n",result)
