@@ -14,12 +14,3 @@ class TextReader:
                     text = word[1]
                     totaltext.append(text)    
               return totaltext
-
-if __name__ == '__main__':
-    img = cv.imread("documents/data2.jpg")
-    img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-
-    test = TextReader()
-    result = test.extract(img)
-    full = ' '.join(result)
-    print(full)

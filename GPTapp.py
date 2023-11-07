@@ -16,13 +16,3 @@ class GPT4:
             )
         return  response.choices[0].message.content
 
-if __name__ == '__main__':
-    gpt = GPT4()
-    img = cv.imread("documents/data2.jpg")
-    img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-
-    test = TextReader()
-    result = test.extract(img)
-    full = ' '.join(result)
-    result = gpt.predict(full)
-    print(result)
